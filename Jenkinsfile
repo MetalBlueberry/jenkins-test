@@ -1,9 +1,14 @@
 pipeline {
     agent { dockerfile true }
     stages {
-        stage('Test') {
+        stage('Build') {
             steps {
                 sh 'python --version'
+            }
+        }
+        stage('Test') {
+            steps {
+                sh 'python main.py'
             }
         }
     }
