@@ -11,5 +11,10 @@ pipeline {
                 sh 'python main.py'
             }
         }
+        stage('Test-fail') {
+            steps {
+                sh 'python fail.py'
+            }
+        }
     }
 }
